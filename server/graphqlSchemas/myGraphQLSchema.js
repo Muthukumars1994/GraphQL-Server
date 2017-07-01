@@ -24,7 +24,7 @@ const typeDefs = `
    }
    
    type Mutation{
-   createUser(firstName:String!, age:Int!): User
+   createUser(firstName:String!, age:Int!,companyId:ID): User
    }
  `;
 
