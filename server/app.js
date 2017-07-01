@@ -5,7 +5,7 @@ import schema from './graphqlSchemas/myGraphQLSchema';
 
 const app = express();
 
-app.use('/graphql', bodyParser.json(), graphqlExpress({ schema: schema }));
+app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
 
 app.use('/graphiql', graphiqlExpress({
   endpointURL: '/graphql',
