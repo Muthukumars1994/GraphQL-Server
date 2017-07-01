@@ -2,8 +2,15 @@ import { makeExecutableSchema } from 'graphql-tools';
 import resolvers from './resolvers';
 
 const typeDefs = `
-   type Query {
+   type User {
+    id: Int!
+    firstName: String
+    age: Int
+   }
+  
+  type Query {
         hello: String! 
+        user(id: String!): User
     }
  `;
 
