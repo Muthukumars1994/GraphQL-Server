@@ -20,6 +20,7 @@ const typeDefs = `
   type Query {
         hello: String! 
         user(id: String!): User
+        company(id: String!): Company
        }
  `;
 
