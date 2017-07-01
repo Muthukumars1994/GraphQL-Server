@@ -4,14 +4,14 @@ import resolvers from './resolvers';
 
 const typeDefs = `
    type User {
-    id: Int!
+    id: ID!
     firstName: String
     age: Int
     company: Company
    }
    
    type Company{
-    id: Int
+    id: ID!
     name: String
     description: String
     user: [User]
@@ -19,9 +19,13 @@ const typeDefs = `
   
   type Query {
         hello: String! 
-        user(id: String!): User
-        company(id: String!): Company
-       }
+        user(id: ID!): User
+        company(id: ID!): Company
+   }
+   
+   type Mutation{
+   createUser(firstName:String!, age:Int!): User
+   }
  `;
 
 const schema = makeExecutableSchema({

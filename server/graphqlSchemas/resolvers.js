@@ -20,5 +20,10 @@ export default {
       axios.get(`http://localhost:${AxiosPort}/companies/${companyId}/users`)
         .then(res => res.data),
   },
+  Mutation: {
+    createUser: (parent, { firstName, age, companyId }, context) =>
+      axios.post(`http://localhost:${AxiosPort}/users`, { firstName, age, companyId })
+        .then(res => res.data),
+  },
 };
 
