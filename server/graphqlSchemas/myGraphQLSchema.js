@@ -7,11 +7,20 @@ const typeDefs = `
     id: Int!
     firstName: String
     age: Int
+    company: Company
    }
+   
+   type Company{
+    id: Int
+    name: String
+    description: String
+    user: [User]
+  }
   
   type Query {
         hello: String! 
         user(id: String!): User
+        company(id: String!): Company
     }
  `;
 
