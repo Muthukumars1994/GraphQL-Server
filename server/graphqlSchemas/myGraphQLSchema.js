@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { makeExecutableSchema } from 'graphql-tools';
 import resolvers from './resolvers';
 
